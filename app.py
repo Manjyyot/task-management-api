@@ -2,6 +2,9 @@ from flask import Flask, jsonify, request
 app1 = Flask(__name__)
 
 tasks = []
+# tasks = [{"id": 1, "title": "Laptop", "description": "Ascer laptop", "status": "Sold","created_at": "12-Aug", "updated_at": "14-aug"}, 
+# {"id": 2, "title": "Mobile", "description": "IPHONE", "status": "Available","created_at": "13-Aug", "updated_at": "15-aug"}]
+
 @app1.route("/tasks", methods=['GET'])
 def getAllTasks():
     return jsonify(tasks)
